@@ -19,42 +19,34 @@ namespace Demo.Controllers
         }
 
         [HttpGet]
-        public object GetUsers()
+        public async Task<object> GetUsers()
         {
-            return _userRepository.GetAllUsers();
+            return await _userRepository.GetAllUsers();
         }
 
         [HttpGet]
         [Route("{id}")]
-        public object GetUserById(long id)
+        public async Task<object> GetUserById(long id)
         {
-            var user = _userRepository.GetUserById(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return Ok(user);
+            return await _userRepository.GetUserById(id); ;
         }
 
         [HttpPost]
-        public async Task<object> CreateUser([FromBody]User user)
+        public async Task<object> CreateUser([FromBody] User user)
         {
-           object createdUser = await _userRepository.CreateUser(user);
-            return Ok(createdUser);
+            return await _userRepository.CreateUser(user);
         }
 
         [HttpPut("{id}")]
-        public object UpdateUser(long id, User updatedUser)
+        public async Task<object> UpdateUser(long id, User updatedUser)
         {
-           object updateUser =  _userRepository.UpdateUser(updatedUser, id);
-            return Ok(updateUser);
+            return await _userRepository.UpdateUser(updatedUser, id);
         }
 
         [HttpDelete("{id}")]
-        public object DeleteUser(long id)
+        public async Task<object> DeleteUser(long id)
         {
-            object deletedUser = _userRepository.DeleteUser(id);
-            return Ok(deletedUser);
+            return await _userRepository.DeleteUser(id);
         }
 
     }

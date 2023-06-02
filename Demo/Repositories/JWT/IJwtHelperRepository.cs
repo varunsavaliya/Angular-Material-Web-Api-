@@ -2,7 +2,7 @@
 
 namespace Demo.Repositories.JWT
 {
-    public interface IJwtHelper
+    public interface IJwtHelperRepository
     {
         public string GetJwtToken(User user);
     }

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Demo.Repositories.JWT
 {
-    public class JwtHelperRepository : IJwtHelper
+    public class JwtHelperRepository : IJwtHelperRepository
     {
         private readonly IConfiguration _configuration;
 

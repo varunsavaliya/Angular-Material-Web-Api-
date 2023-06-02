@@ -12,6 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using AutoMapper;
+using Demo.Models.User;
+using Demo.Configuration;
 
 namespace Demo
 {
@@ -23,13 +26,14 @@ namespace Demo
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(MapperConfig));
+
+
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IAuth, AuthRepository>();
-            services.AddScoped<IJwtHelper, JwtHelperRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IJwtHelperRepository, JwtHelperRepository>();
 
             services.AddControllers();
 
@@ -56,8 +60,8 @@ namespace Demo
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo", Version = "v1" });
             });
-    //        services.AddDbContextPool<AppDbContext>(options =>
-    //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //        services.AddDbContextPool<AppDbContext>(options =>
+            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDbContextPool<AppDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b =>
@@ -69,6 +73,7 @@ namespace Demo
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
