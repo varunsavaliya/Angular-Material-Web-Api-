@@ -34,10 +34,10 @@ namespace Demo.Repositories.Auth
                     user1.Username.Equals(user.Username) &&
                     user1.Password.Equals(user.Password));
 
-                    accountModel.Data = _mapper.Map<UserModel>(validUser);
-                    accountModel.Token = validUser != null ? _jwtHelper.GetJwtToken(validUser) : null;
-                    accountModel.Message = validUser != null ? "success" : "failed";
-                    accountModel.Success = validUser != null ? true : false;
+                accountModel.Data = _mapper.Map<UserModel>(validUser);
+                accountModel.Token = validUser != null ? _jwtHelper.GetJwtToken(validUser) : null;
+                accountModel.Message = validUser != null ? "success" : "failed";
+                accountModel.Success = validUser != null ? true : false;
 
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace Demo.Repositories.Auth
             AccountModel accountModel = new();
             try
             {
-                    var users = await _dbContext.Users.ToListAsync();
+                var users = await _dbContext.Users.ToListAsync();
                 var isUserExists = users.FirstOrDefault(u =>
                 string.Equals(u.Username, user.Username, StringComparison.Ordinal));
 
@@ -67,7 +67,7 @@ namespace Demo.Repositories.Auth
                 {
                     await _dbContext.Users.AddAsync(user);
                     await _dbContext.SaveChangesAsync();
-                     users = await _dbContext.Users.ToListAsync();
+                    users = await _dbContext.Users.ToListAsync();
 
 
                     User userResponseData = users.FirstOrDefault(user1 =>

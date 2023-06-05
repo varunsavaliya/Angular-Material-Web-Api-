@@ -186,3 +186,4 @@ D:\Projects\angular material project\Demo\Demo\bin\Debug\net5.0\Microsoft.Extens
 D:\Projects\angular material project\Demo\Demo\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 D:\Projects\angular material project\Demo\Demo\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 D:\Projects\angular material project\Demo\Demo\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\angular material project\Demo\Demo\bin\Debug\net5.0\Dapper.dll

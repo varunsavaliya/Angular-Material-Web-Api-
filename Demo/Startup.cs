@@ -15,6 +15,7 @@ using System.Text;
 using AutoMapper;
 using Demo.Models.User;
 using Demo.Configuration;
+using Demo.Repositories.SMSTemplate;
 
 namespace Demo
 {
@@ -34,7 +35,9 @@ namespace Demo
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IJwtHelperRepository, JwtHelperRepository>();
+            services.AddScoped<ISMSTemplateRepository, SMSTemplateRepository>();
 
+            services.AddSingleton<DapperContext>();
             services.AddControllers();
 
             services.AddAuthentication(options =>

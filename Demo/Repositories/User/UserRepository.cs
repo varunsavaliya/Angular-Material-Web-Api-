@@ -149,7 +149,7 @@ namespace Demo.Repositories
                 if (user != null)
                 {
                     _dbContext.Users.Remove(user);
-                  await  _dbContext.SaveChangesAsync();
+                    await _dbContext.SaveChangesAsync();
 
                     responseModel.Message = user.Username + " has been deleted successfully";
                     responseModel.Success = true;

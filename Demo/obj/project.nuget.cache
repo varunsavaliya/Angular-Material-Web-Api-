@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "oPESZacpF/5Nt1kiq2nJYDaCR+igHgJd3vAVGL5+RJqouC4nM47HXW9//3GY20k8DJHkQmH15Hcd4FiO6kFNPg==",
+  "dgSpecHash": "c85vJcZAXnrEUXrcvm3/B+KgD7I4aKIa58LqglyAkVt1fkCkC73brHltlh7cvjUuynDjk4+0xLyh4x6C8ImcFQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\angular material project\\Demo\\Demo\\Demo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pct35\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pct35\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\pct35\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\pct35\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pct35\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
     "C:\\Users\\pct35\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
