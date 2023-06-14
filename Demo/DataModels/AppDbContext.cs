@@ -57,3 +57,6 @@ namespace Demo.DataModels
 
     }
 }
+
+
+//Scaffold - DbContext Name = ConnectionStrings:DefaultConnection Microsoft.EntityFrameworkCore.SqlServer -OutputDir DataModels -Context ApplicationDbContext -f
